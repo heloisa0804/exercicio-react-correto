@@ -1,0 +1,44 @@
+.toposite {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: var(--azul-escuro);
+  color: var(--branco);
+  padding: 2.5rem 0 1.2rem 0;
+  border-bottom: 4px solid var(--vermelho);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: var(--cabecalho-altura);
+  box-shadow: none;
+}
+
+.logo {
+  vertical-align: middle;
+  margin-right: 1.2rem;
+  width: 90px;
+  height: auto;
+  filter: none;
+}
+
+.titulo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  color: var(--branco);
+  text-shadow: none;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  width: 100%;
+}
+
+.toposite hr {
+  display: none;
+}

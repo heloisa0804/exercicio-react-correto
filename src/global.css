@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;700&display=swap');
+
+:root {
+  --cabecalho-altura: 120px;
+  --gap-below-header: 24px;
+  --azul-escuro: #14213d;
+  --vermelho: #f72585;
+  --branco: #fff;
+  --cinza-claro: #f7f7fa;
+  --verde-limao: #43ff64;
+  --cinza-medio: #d1d5db;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', Arial, sans-serif;
+  background: var(--cinza-claro);
+  color: var(--azul-escuro);
+  line-height: 1.7;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-layout-wrapper {
+  display: flex;
+  flex: 1;
+  margin-top: calc(var(--cabecalho-altura) + var(--gap-below-header));
+  max-width: 1200px;
+  width: 96%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 24px;
+  background: var(--branco);
+  box-shadow: 0 2px 12px rgba(20,33,61,0.07);
+  border: 1.5px solid var(--cinza-medio);
+  height: auto;
+  min-height: 60vh;
+}
+
+/* Menu e conteúdo principal */
+.menu-content-container {
+  background: transparent;
+  min-width: 220px;
+  border-right: 1.5px solid var(--cinza-medio);
+  padding-top: 2rem;
+}
+
+.main-page-content-container {
+  flex-grow: 1;
+  background: transparent;
+  padding: 3rem 2.5rem;
+}
+
+/* Links */
+a {
+  color: var(--vermelho);
+  text-decoration: none;
+  border-bottom: none;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: var(--azul-escuro);
+  border-bottom: none;
+}
+
+/* Títulos */
+h1, h2, h3 {
+  font-family: 'Bebas Neue', Arial, sans-serif;
+  color: var(--azul-escuro);
+  font-weight: 800;
+  margin-bottom: 1.2rem;
+  margin-top: 0;
+  letter-spacing: -0.01em;
+  position: relative;
+}
+/* Remover a barra rosa dos títulos */
+/* h1::before, h2::before, h3::before {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 1.2em;
+  background: var(--vermelho);
+  border-radius: 3px;
+  margin-right: 0.7rem;
+  vertical-align: middle;
+} */
+
+h1 {
+  font-size: 2.8rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.3rem;
+}
+
+/* Remover barra rosa dos títulos do rodapé */
+footer h2::before {
+  display: none !important;
+  content: none !important;
+}
+
+/* Rodapé */
+footer {
+  background: var(--azul-escuro);
+  color: var(--branco);
+  padding: 1.5rem 0;
+  text-align: center;
+  font-size: 0.95rem;
+  border-top: 2px solid var(--vermelho);
+  margin-top: 2rem;
+}
+
+footer p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.outro-texto {
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--vermelho);
+  letter-spacing: 0.12em;
+}
+
+button, .btn {
+  background: var(--vermelho);
+  color: var(--branco);
+  border: none;
+  border-radius: 8px;
+  padding: 0.7em 1.5em;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(247,37,133,0.08);
+  transition: background 0.2s, color 0.2s;
+}
+button:hover, .btn:hover {
+  background: var(--azul-escuro);
+  color: var(--verde-limao);
+}
+
+ul, ol {
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+  padding-left: 1.5rem;
+}
+
+ul li, ol li {
+  margin-bottom: 1.1rem;
+  line-height: 1.7;
+  font-size: 1.08rem;
+}
+
+/* Responsividade */
+
+@media (max-width: 900px) {
+  .main-layout-wrapper {
+    flex-direction: column;
+    width: 99%;
+    padding: 0 0.5rem;
+  }
+  .main-page-content-container {
+    padding: 1.5rem 0.7rem;
+  }
+  .menu-content-container {
+    min-width: 100%;
+    border-right: none;
+    border-bottom: 1.5px solid var(--cinza-medio);
+    padding-top: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.3rem;
+  }
+  h3 {
+    font-size: 1.1rem;
+  }
+  .main-page-content-container {
+    padding: 0.7rem 0.2rem;
+  }
+}
